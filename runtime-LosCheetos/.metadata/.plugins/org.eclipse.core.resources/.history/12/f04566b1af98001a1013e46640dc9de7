@@ -1,0 +1,91 @@
+import math
+def ls():
+	0
+import math
+def bf(x):
+	if (x
+	 == True
+	):
+		bf((x
+		)  + (1
+		) 
+		,
+		)
+	else:
+		0
+import math
+def irec(ix, y):
+	class edu.upb.lp.isc.losCheetos.impl.WhileExpressionImpl
+import math
+def sg(sf):
+	len([1
+	,
+	True
+	,
+	]
+	)
+	len([]
+	) == 0
+
+print(complex(1, 2)
+)
+print([1
+,
+1
+,
+2
+,
+]
+)
+print([1
+,
+2
+,
+]
+[1:]
+[0]
+)
+print("f"
+ + "g"
+)
+print(len("f")
+)
+print("f"
+)
+print(len([]
+)
+)
+print(len([1
+,
+]
+[1:]
+) == 0
+)
+print(((2
+)  + (2
+) 
+)  - ((2
+)  + (1
+) 
+)  - ((2
+)  * (3
+) 
+) 
+)
+print(["s"
+,
+1
+,
+True
+,
+]
+)
+print(irec(2
+,
+"3"
+,
+)
+)
+print(2
+ < 3
+)

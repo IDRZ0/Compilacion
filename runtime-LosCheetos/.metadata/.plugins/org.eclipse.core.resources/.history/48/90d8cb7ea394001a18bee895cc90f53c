@@ -1,0 +1,17 @@
+Definitions:
+	(define (f x)
+		x
+		(if (< x 0)
+			0
+			1
+		)
+	)
+	(define (rec y)
+		(while (> y 0)
+			(rec (- y 0))
+		)
+	)
+Executions:
+	0
+	(rec (+ 1 0))
+	(f #t)

@@ -1,0 +1,10 @@
+Definitions:
+	(define (ifibo n)
+    (if (= n 0)
+        1
+        (if(= n 1)
+           1
+           (+ (ifibo (- n 1)) (ifibo (- n 2)))
+           )
+        )
+  )

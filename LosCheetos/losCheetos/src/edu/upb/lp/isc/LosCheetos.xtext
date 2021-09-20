@@ -1,0 +1,102 @@
+grammar edu.upb.lp.isc.LosCheetos with org.eclipse.xtext.common.Terminals
+
+generate losCheetos "http://www.upb.edu/lp/isc/LosCheetos"
+
+MyRacketProgram:
+	("Definitions" ":"
+	defines+=Define+)?
+	"Executions" ":"
+	executions+=Expression+;
+
+Define:
+	"(" "define" "(" name=ID params+=ID* ")" body+=(Expression)+ ")";
+
+Expression:
+	SimpleExpression | NumberExpression | IfExpression | FunctionCallExpression | WhileExpression | ParamCallExpression;
+
+SimpleExpression:
+	BoolExpression | StrExpression | ListExpression | PrintExpression | ListOpExpression | StrOpExpression;
+
+NumberExpression:
+	IntExpression | DoubleExpression | FracExpression | CompExpression | ArithExpression;
+
+IntExpression:
+	value=INT;
+
+DoubleExpression:
+	"(" "double" "(" int=INT dec=INT ")" ")";
+
+FracExpression:
+	"(" "fraction" "(" num=INT dec=INT ")" ")";
+
+CompExpression:
+	"(" "complex" "(" real=INT imag=INT ")" ")";
+
+BoolExpression:
+	BoolConstant | BoolNumCompExpression | BoolCompExpression;
+
+BoolConstant:
+	value?="#t" | {BoolConstant} "#f";
+
+BoolNumCompExpression:
+	"(" comp=("<" | ">" | "=" | "<=" | ">=") e1=(NumberExpression | ParamCallExpression | FunctionCallExpression)
+	e2=(NumberExpression |
+	ParamCallExpression | FunctionCallExpression) ")";
+
+BoolCompExpression:
+	"(" ("eq?" | "equal?") e1=Expression e2=Expression ")";
+
+StrExpression:
+	value=STRING;
+
+ListExpression:
+	{ListExpression} "(" "list" args+=Expression* ")";
+
+PrintExpression:
+	"(" "print" expr=Expression ")";
+
+ListOpExpression:
+	CarExpression | CdrExpression | LengthExpression | EmptyExpression | ConsExpression;
+
+CarExpression:
+	"(" "car" list=(ListExpression | CdrExpression | ParamCallExpression | FunctionCallExpression) ")";
+
+CdrExpression:
+	"(" "cdr" list=(ListExpression | CdrExpression | ParamCallExpression | FunctionCallExpression) ")";
+
+LengthExpression:
+	"(" "length" list=(ListExpression | CdrExpression | ParamCallExpression | ConsExpression | FunctionCallExpression)
+	")";
+
+EmptyExpression:
+	"(" "empty?" list=(ListExpression | ListOpExpression | FunctionCallExpression) ")";
+
+ConsExpression:
+	"(" "cons" expr=Expression list=ListExpression ")";
+
+StrOpExpression:
+	StrLenExpression | StrAppExpression;
+
+StrLenExpression:
+	"(" "string-length" str=StrExpression ")";
+
+StrAppExpression:
+	"(" "string-append" str1=(StrExpression | ParamCallExpression | FunctionCallExpression) str2=(StrExpression |
+	ParamCallExpression | FunctionCallExpression) ")";
+
+ParamCallExpression:
+	param=ID;
+
+ArithExpression:
+	"(" op=("+" | "-" | "*" | "/") arg1=(NumberExpression | ParamCallExpression | FunctionCallExpression)
+	oargs+=(NumberExpression |
+	ParamCallExpression | FunctionCallExpression)+ ")";
+
+IfExpression:
+	"(" "if" cond=BoolExpression then=Expression else=Expression ")";
+
+FunctionCallExpression:
+	"(" function=[Define] args+=Expression* ")";
+
+WhileExpression:
+	"(" "while" cond=BoolExpression do+=Expression+ ")";

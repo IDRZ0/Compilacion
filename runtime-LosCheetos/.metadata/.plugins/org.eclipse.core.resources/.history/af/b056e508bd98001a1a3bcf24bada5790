@@ -1,0 +1,38 @@
+Definitions:
+	(define (ldos)
+		(list 1 2)
+	)
+	(define (bif x)
+		(if (= x 2)
+			#t
+			#f
+		)
+	)
+	(define (irec ix)
+		(while (> ix (+ 2 2))
+			(irec (- ix 1))
+		)
+	)
+	(define (sapp s)
+		(string-append "Hola " s)
+	)
+	(define ( ifibo n )
+		(if ( = n 0 )
+			1
+			(if ( = n 1 )
+				1
+				( + ( ifibo ( - n 1 ) ) ( ifibo ( - n 2 ) ) )
+			)
+		)
+	)
+Executions:
+	1
+	#t
+	"hola"
+	(fraction (1 2))
+	(complex (2 3))
+	(double (2 25))
+	(empty? (list))
+	(string-length "hola")
+	(length (cdr (list 1 2 3)))
+	(ifibo 3)

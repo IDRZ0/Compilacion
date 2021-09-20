@@ -1,0 +1,15 @@
+def f (x):{
+	print(class edu.upb.lp.isc.losCheetos.impl.ParamCallExpressionImpl)
+	print(class edu.upb.lp.isc.losCheetos.impl.IfExpressionImpl)
+}
+def rec (y):{
+	print(class edu.upb.lp.isc.losCheetos.impl.WhileExpressionImpl)
+}
+def g (t):{
+	print(class edu.upb.lp.isc.losCheetos.impl.LengthExpressionImpl)
+	print(class edu.upb.lp.isc.losCheetos.impl.EmptyExpressionImpl)
+}
+print(class edu.upb.lp.isc.losCheetos.impl.IntExpressionImpl)
+print(class edu.upb.lp.isc.losCheetos.impl.FunctionCallExpressionImpl)
+print(class edu.upb.lp.isc.losCheetos.impl.FunctionCallExpressionImpl)
+print(class edu.upb.lp.isc.losCheetos.impl.FunctionCallExpressionImpl)

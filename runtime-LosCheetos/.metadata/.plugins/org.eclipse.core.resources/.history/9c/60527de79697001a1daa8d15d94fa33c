@@ -1,0 +1,28 @@
+Definitions:
+	(define (l y x)
+		2
+	)
+	(define (f x)
+		(if (< x 0)
+			(f (+ x 1))
+			0
+		)
+	)
+	(define (irec iy)
+		(while (> iy (+ 2 2))
+			(f iy)
+		)
+	)
+	(define (g)
+		(length (list 1 #t))
+		(empty? (list))
+	)
+Executions:
+	#f
+	#t
+	(print "f")
+	(length (cons 2 (list)))
+	< 2 2
+	(list)
+	"s"
+	(f 0)

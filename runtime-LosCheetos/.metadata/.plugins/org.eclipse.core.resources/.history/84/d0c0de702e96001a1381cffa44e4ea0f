@@ -1,0 +1,24 @@
+def a():{
+	2
+}
+def f(x):{
+	print("if")
+}
+def irec(iy):{
+	class edu.upb.lp.isc.losCheetos.impl.WhileExpressionImpl
+}
+def g():{
+	class edu.upb.lp.isc.losCheetos.impl.LengthExpressionImpl
+	class edu.upb.lp.isc.losCheetos.impl.EmptyExpressionImpl
+}
+
+print(0
+),
+print(class edu.upb.lp.isc.losCheetos.impl.ArithExpressionImpl
+),
+print(class edu.upb.lp.isc.losCheetos.impl.ListExpressionImpl
+),
+print(s
+),
+print(class edu.upb.lp.isc.losCheetos.impl.FunctionCallExpressionImpl
+),

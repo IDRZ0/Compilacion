@@ -1,0 +1,23 @@
+Definitions:
+	(define (bf x)
+		(if (eq? x #t)
+			(bf (+ x 1))
+			0
+		)
+	)
+	(define (irec i)
+		(while (> i (+ 2 2))
+			1
+		)
+	)
+	(define (sg)
+		(length (list 1 #t))
+		(empty? (list))
+	)
+Executions:
+	#f
+	(print "f")
+	(length (cons 2 (list)))
+	(< 2 2)
+	(list "s" 1 #t)
+	(irec 0 2)

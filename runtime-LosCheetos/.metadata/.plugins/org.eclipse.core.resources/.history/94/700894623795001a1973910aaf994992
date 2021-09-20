@@ -1,0 +1,22 @@
+Definitions:
+	(define (f x)
+		x
+		(if (< x 0)
+			(f (+ x 1))
+			(rec (+ x 1))
+		)
+	)
+	(define (rec y)
+		(while (> y 0)
+			(rec (f y))
+		)
+	)
+	(define (g t)
+		(length (list 1 #t t))
+		(empty? "f")
+	)
+Executions:
+	0
+	(rec (+ 1 0))
+	(f #t)
+	(rec #f)

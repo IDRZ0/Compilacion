@@ -1,0 +1,23 @@
+def a():{
+	print(2),
+}
+def f(x):{
+	print("class edu.upb.lp.isc.losCheetos.impl.FunctionCallExpressionImpl"),
+	print("if"),
+}
+def rec(y):{
+	print("class edu.upb.lp.isc.losCheetos.impl.WhileExpressionImpl"),
+}
+def g():{
+	print("class edu.upb.lp.isc.losCheetos.impl.LengthExpressionImpl"),
+	print("class edu.upb.lp.isc.losCheetos.impl.EmptyExpressionImpl"),
+}
+
+print(0),
+print("class edu.upb.lp.isc.losCheetos.impl.FunctionCallExpressionImpl"),
+print("class edu.upb.lp.isc.losCheetos.impl.ArithExpressionImpl"),
+print("class edu.upb.lp.isc.losCheetos.impl.ListExpressionImpl"),
+print(s),
+print("class edu.upb.lp.isc.losCheetos.impl.FunctionCallExpressionImpl"),
+print("class edu.upb.lp.isc.losCheetos.impl.FunctionCallExpressionImpl"),
+print("class edu.upb.lp.isc.losCheetos.impl.FunctionCallExpressionImpl"),

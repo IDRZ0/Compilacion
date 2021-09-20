@@ -1,0 +1,33 @@
+Definitions:
+	(define (ls)
+		0
+		1
+	)
+	(define (bf x)
+		(if (eq? x #t)
+			(bf (+ x 1))
+			0
+		)
+	)
+	(define (irec ix y)
+		(while (> ix (+ 2 2))
+			1
+		)
+	)
+	(define (sg sf)
+		(length (list 1 #t))
+		(empty? (list))
+	)
+Executions:
+	(double (1 2))
+	(cons 1 (list 1 2))
+	(car (cdr (list 1 2)))
+	(string-append "f" "g")
+	(string-length "f")
+	(print "f")
+	(length (list))
+	(empty? (cdr (list 1)))
+	(< 2 2)
+	(list "s" 1 #t)
+	(irec 2 "3")
+	(sg 4)
